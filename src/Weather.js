@@ -2,12 +2,12 @@ import React from "react";
 
 const Weather = (props) => {
     return (
-        <div>
-            {props.country && props.city && <p>Location: {props.city},    {props.country}</p>}
-            {props.temp && <p>Temperature: {props.temp}</p>}
-            {props.humidity && <p>Humidity: {props.humidity}</p>}
-            {props.desc && <p>Conditions:  {props.desc}</p>}
-            {props.error && <p>{props.error}</p>}
+        <div className="weather-info">
+            {props.country && props.city && <p className="weather__key">Location: <span className="weather__value"> {props.city}, {props.country} </span> </p>}
+            {props.temp && <p className="weather__key">Temperature: <span className="weather__value">{props.temp} </span></p>}
+            {props.humidity && <p className="weather__key">Humidity: <span className="weather__value"> {props.humidity} </span></p>}
+            {props.desc && <p className="weather__key">Conditions: <span className="weather__value"> {props.desc} </span></p>}
+            {props.error && <p className="weather__error">{props.error}</p>}
         </div>
     )
 }
